@@ -1,14 +1,24 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  public: {
-    polisApi: 'http://localhost:5000'
+  // Runtime configuration (Nuxt 4 recommended)
+  runtimeConfig: {
+    public: {
+      // Used everywhere with useRuntimeConfig().public.polisApi
+      polisApi: 'http://localhost:5000'
+    }
   },
 
-    devServer: {
-    port: 6002
+  // Nuxt 4 dev server recommendation
+  devServer: {
+    port: 6002,
+    host: '0.0.0.0'
   },
-   pages: true,
 
+  // Enable Pages Router (Nuxt 4 default is App Router)
+  pages: true,
+
+  // Nuxt 4 Required
   compatibilityDate: '2025-07-15',
+
+  // DevTools
   devtools: { enabled: true }
-})
+});
