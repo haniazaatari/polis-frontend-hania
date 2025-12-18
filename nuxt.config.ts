@@ -13,8 +13,8 @@ export default defineNuxtConfig({
     host: '0.0.0.0'
   },
 
-  // Enable Pages Router (Nuxt 4 default is App Router)
-  pages: true,
+  // // Enable Pages Router (Nuxt 4 default is App Router)
+  // pages: true,
 
   // Nuxt 4 Required
   compatibilityDate: '2025-07-15',
