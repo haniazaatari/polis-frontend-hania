@@ -1,8 +1,11 @@
 <script setup>
-const polis = usePolis()
-const data = await polis.getConversation('1')
+const { getHealth } = usePolis()
+const res = await getHealth()
+console.log(res)
 </script>
 
 <template>
-  <pre>{{ data }}</pre>
+  <div>
+    <h1>Polis test page</h1>
+  </div>
 </template>
