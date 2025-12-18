@@ -1,4 +1,8 @@
 <script setup>
+
+  const polis = usePolis()
+console.log("POLIS CONTENT:", polis)
+
 const { getHealth } = usePolis()
 const res = await getHealth()
 console.log(res)

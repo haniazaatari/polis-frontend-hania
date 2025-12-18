@@ -1,13 +1,17 @@
-export function usePolis() {
-  const baseURL = 'http://localhost:5000';
+export const usePolis = () => {
+  const api = 'http://localhost:5000'
 
-  async function getConversation(id: string) {
-    return await $fetch(`/api/v3/conversations/${id}`, { baseURL });
+  const getHealth = async () => {
+    try {
+      const res = await fetch(`${api}/api/v3/health`)
+      return await res.json()
+    } catch (err) {
+      console.error('Health check failed:', err)
+      return null
+    }
   }
 
-  async function getComments(conversationId: string) {
-    return await $fetch(`/api/v3/comments?conversation_id=${conversationId}`, { baseURL });
+  return {
+    getHealth
   }
-
-  return { getConversation, getComments };
 }
