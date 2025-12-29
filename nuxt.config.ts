@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       // Used everywhere with useRuntimeConfig().public.polisApi
-      polisApi: 'http://localhost:5000'
+      polisApi: "https://polisbackend.zaatari.net"
     }
   },
 
