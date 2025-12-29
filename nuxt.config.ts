@@ -11,7 +11,17 @@ export default defineNuxtConfig({
  devServer: {
     host: '0.0.0.0',
     port: 6002,
-    allowedHosts: ['polis.zaatari.net']
+     },
+
+      // ★ Add this block — REQUIRED for Vite to accept Cloudflare traffic
+  vite: {
+    server: {
+      allowedHosts: ['polis.zaatari.net'],
+      hmr: {
+        host: 'polis.zaatari.net',
+        protocol: 'wss',
+      }
+    }
   },
   pages: true,
 
