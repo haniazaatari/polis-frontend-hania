@@ -8,10 +8,12 @@ export default defineNuxtConfig({
   },
 
   // Nuxt 4 dev server recommendation
-  devServer: {
+ devServer: {
+    host: '0.0.0.0',
     port: 6002,
-    host: '0.0.0.0'
+    allowedHosts: ['polis.zaatari.net']
   },
+  pages: true,
 
   // // Enable Pages Router (Nuxt 4 default is App Router)
   // pages: true,
